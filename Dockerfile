@@ -11,6 +11,8 @@ ENV S6_BEHAVIOUR_IF_STAGE2_FAILS 2
 RUN DEBIAN_FRONTEND=noninteractive apt update && \
      apt install -y tar git htop iftop vim tzdata rdfind symlinks detox
 
+RUN apt update && apt install -y ffmpeg
+
 RUN pip3 install git+https://github.com/aliparlakci/bulk-downloader-for-reddit.git@development
 
 ADD https://github.com/just-containers/s6-overlay/releases/download/v${S6_VER}/s6-overlay-noarch.tar.xz /tmp
