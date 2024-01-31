@@ -119,7 +119,7 @@ fi
 
 # Run BDFR
 log "Running BDFR"
-python -m bdfr download /downloads $_OPTS
+python -m bdfr download --submitted /downloads $_OPTS
 log "BDFR run complete"
 
 # Run detox
